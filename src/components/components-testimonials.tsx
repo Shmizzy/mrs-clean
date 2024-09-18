@@ -4,22 +4,22 @@ import React from 'react'
 import { Star } from 'lucide-react'
 
 const TestimonialCard: React.FC<{ name: string; testimonial: string }> = ({ name, testimonial }) => (
-  <div className="bg-white p-6 rounded-lg shadow-md">
+  <div className="bg-gray-800 p-6 rounded-lg shadow-md">
     <div className="flex text-yellow-400 mb-2">
       {[...Array(5)].map((_, i) => (
         <Star key={i} size={20} fill="currentColor" />
       ))}
     </div>
-    <p className="text-gray-600 mb-4">{testimonial}</p>
-    <p className="font-semibold">{name}</p>
+    <p className="text-gray-300 mb-4">{testimonial}</p>
+    <p className="font-semibold text-blue-400">{name}</p>
   </div>
 )
 
 const Testimonials: React.FC = () => {
   return (
-    <section id="testimonials" className="py-20 bg-gray-50">
+    <section id="testimonials" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-white">What Our Customers Say</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <TestimonialCard
             name="John Doe"

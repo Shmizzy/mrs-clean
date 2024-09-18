@@ -3,7 +3,6 @@
 import React, { useState } from 'react'
 import { ChevronUp } from 'lucide-react'
 
-// Importing components (these will be created next)
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Services from './components/Services'
@@ -33,7 +32,7 @@ const App: React.FC = () => {
   }, [showScrollTop])
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-gray-900 text-white">
       <Header />
       <main className="flex-grow">
         <Hero />
@@ -45,7 +44,7 @@ const App: React.FC = () => {
       <Footer />
       {showScrollTop && (
         <button
-          className="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg transition-all hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+          className="fixed bottom-8 right-8 bg-blue-500 text-white p-3 rounded-full shadow-lg transition-all hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
           onClick={scrollTop}
         >
           <ChevronUp size={24} />
